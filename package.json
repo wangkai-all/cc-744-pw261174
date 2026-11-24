@@ -1,0 +1,11 @@
+{
+  "name": "parts-clearing-desk",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "多品种零件拍卖清算台：组合报价、分段供给、逐报价反事实支付",
+  "scripts": {
+    "start": "node tools/serve.mjs",
+    "test": "node --test test/*.test.mjs"
+  }
+}

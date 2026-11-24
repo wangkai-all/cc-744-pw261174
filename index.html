@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>零件清算台 · 多品种组合拍卖</title>
+    <meta
+      name="description"
+      content="多品种零件组合拍卖清算演示：组合成交、分段供给、逐报价反事实支付。全部为虚构订单与虚构资金，不接真实账户。"
+    />
+    <link rel="stylesheet" href="/src/ui/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
+    <header class="topbar">
+      <div class="topbar-inner">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7">
+              <path d="M4 8.5 12 4l8 4.5v7L12 20l-8-4.5z" />
+              <path d="M4 8.5 12 13l8-4.5M12 13v7" />
+            </svg>
+          </span>
+          <span class="brand-text">
+            <strong>零件清算台</strong>
+            <span>多品种组合拍卖 · 反事实支付</span>
+          </span>
+        </div>
+        <nav class="scenario-nav" id="scenario-nav" aria-label="内置场景"></nav>
+        <div class="topbar-actions">
+          <span class="demo-badge">虚构订单 · 不接真实资金</span>
+          <button class="icon-btn" id="theme-toggle" type="button" aria-label="切换浅色/深色主题" title="切换主题">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+              <circle cx="12" cy="12" r="4.2" />
+              <path d="M12 2.8v2.2M12 19v2.2M4.9 4.9l1.6 1.6M17.5 17.5l1.6 1.6M2.8 12H5M19 12h2.2M4.9 19.1l1.6-1.6M17.5 6.5l1.6-1.6" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="section-nav" id="section-nav" aria-label="页面内导航">
+        <a href="#outcome">清算结果</a>
+        <a href="#quotes">报价簿</a>
+        <a href="#compare">供给对比</a>
+        <a href="#validation">校验</a>
+        <div class="section-nav-spacer"></div>
+        <span class="round-pill" id="round-pill">第 1 轮 · 草稿</span>
+      </div>
+    </header>
+
+    <main id="main" class="shell">
+      <div class="layout">
+        <aside class="sidebar" id="sidebar" aria-label="清算控制"></aside>
+        <div class="content" id="content"></div>
+      </div>
+    </main>
+
+    <div id="drawer-root"></div>
+    <div id="modal-root"></div>
+    <div id="toast-root" class="toast-root" aria-live="polite"></div>
+    <div id="tooltip" class="chart-tooltip" role="status" hidden></div>
+
+    <script type="module" src="/src/ui/app.js"></script>
+  </body>
+</html>
